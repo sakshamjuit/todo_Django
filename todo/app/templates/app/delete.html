@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <p class="alert alert-danger">Are you sure you want to delete {{task.title}}</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input class="btn btn-danger" type="submit" name="Delete">
+        <a class="btn btn-info" href="{% url 'list' %}">Cancel</a>
+    </form>
+</div>
+
+
+
+</body>
+</html>
